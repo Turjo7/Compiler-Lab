@@ -1,0 +1,14 @@
+%{
+#include<stdio.h>
+%}
+
+%%
+[a-zA-Z][a-zA-Z_0-9]*@[a-zA-Z0-9]+(.[a-zA-Z]+)+         {printf("Valid Email\n");}
+
+%%
+int main()
+
+{
+  	yylex();
+	return 0;
+}

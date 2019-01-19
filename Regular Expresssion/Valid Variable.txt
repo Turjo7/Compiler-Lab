@@ -1,0 +1,16 @@
+%{
+#include<stdio.h>
+%}
+
+%%
+
+[a-zA-Z_][a-zA-Z_0-9]* {printf("Valid Variable\n");}
+[^a-zA-Z_][a-zA-Z_0-9]+ {printf("Not Valid Variable\n");}
+
+%%
+int main()
+
+{
+  	yylex();
+	return 0;
+}
